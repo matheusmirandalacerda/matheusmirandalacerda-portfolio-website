@@ -1,24 +1,63 @@
-<html> 
-    <head> 
-       <link rel="stylesheet" href="style.css"> 
+<!DOCTYPE html>
+<html lang="pt-br"> 
+    
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        
+        <title>Site pessoal de Matheus</title> 
+
+        <meta name = "description" content = "Landing page pessoal do programador Matheus. Aqui você encontrará informações do currículo e portfólio do desenvolvedor de software">
+        <meta name = "keywords" content = "site, pessoal, landing, portfólio, currículo, Matheus">   
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+       <link rel="stylesheet" href="css/style.css"> 
        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
+
         <header>
-            <img src="Matheus Miranda Lacerda.png" alt="Foto de Matheus">
-            <h1>Matheus Miranda Lacerda</h1>
+            <img src="assets/Matheus Miranda Lacerda.png.jpeg" alt="Foto de Matheus">
+            <h1 id="nome-perfil">Matheus Miranda Lacerda</h1>
+            <button onclick="manipularElementos()">Selecionar</button>
+            <button onclick="navegarEManipularDOM()">Navegar</button>
+            <button onclick="manipularElementosComMetodosDOM()">Manipular</button>
+            <button onclick="manipularEstilos()">Estilizar</button>
+            <button id="eventoBotao">Eventos</button>
         </header>
+
+        
+        <nav>   
+            <ul>
+                <li class="button"><a href="#">Início</a></li>       
+                <li class="button"><a target = "_blank" href="pages/formacao.html">Formação</a></li>
+                <li class="button"><a target = "_blank" href="pages/experiencia_profissional.html">Experiência Profissional</a></li>
+                <li class="button"><a target = "_blank" href="pages/qualificacoes.html">Qualificações</a></li>
+                <li class="button"><a target = "_blank" href="pages/portfolio.html">Portfólio</a></li>
+                <li class="button"><a target = "_blank" href="pages/contato.html">Contato</a></li>
+                     
+            </ul>
+        </nav>
+        
+
+        
+        
         <section>
             <h2>Resumo</h2>
             <p>Estou iniciando no mundo da programação, a princípio aprendendo HTML, CSS e JavaScript, mas com bastante empolgação em conhecer melhor as ferramentas disponíveis que esse universo da programação oferta.</p>
         </section> 
+
         <section>
             <h2>Formação</h2>
             <p> · Pós-Graduação em Administração Financeira / conclusão em 2020. (Unicesumar)<br>
                 · Gestão Financeira / conclusão em 2020. (Unicesumar)<br>
                 · Logística / conclusão em 2015. (UNINTER)<br>                   
                 · Auxiliar Administrativo / conclusão em 2012. (SENAC)</p>
-        </section>    
+        </section> 
+
         <section>
             <h2>Experiência Profissional</h2>    
             <p> · 2023 – Unimed Caruaru | Cargo: Técnico Financeiro | Setor: Produção Médica<br>
@@ -28,7 +67,8 @@
                 · 2014 – 2017 Trimania (Itajaí-SC) | Cargo: Assistente Administrativo Operacional<br>
                 · 2012 – 2014 Capital Cap. (Brasília-DF) | Cargo: Auxiliar Administrativo<br>
                 · 2011 – 2012 Rodobens Caminhões (Caruaru-PE) | Cargo: Auxiliar Administrativo</p>        
-        </section>   
+        </section>  
+
         <section> 
              <h2>Qualificações</h2>
              <p>· Desenvolvedor Backend (Softex, 276h/a, conclusão em dezembro/2022)<br>
@@ -40,23 +80,57 @@
                 · Excel Intensivo (CEBIP, 12 h/a, conclusão em 2014)
                 </p>
         </section>
-        <section> 
+
+        <section id="projetos"> 
             <h2>Portfólio</h2>
-            <a target = "_blank"
+            <div class="projetos_conteudo">
+                <div class="caixa">
+                    <a target = "_blank"
             href = "https://matheusmirandalacerda.github.io/nlw-esports-explorer/" > 
-            <img src = "preview.png"
-            alt = "Imagem Preview" /> </a>
-       </section>      
+            <img src = "assets/preview.png.png" alt = "Imagem Preview" /> 
+            <p>Projeto NLW eSports</p></a>
+
+                </div>
+
+                <div class="caixa">
+                    <a target = "_blank"
+                    href = "https://github.com/matheusmirandalacerda/-Projeto_Conceitual_Banco_de_Dados_E-Commerce" > 
+                    <img src="assets/MySQL.jpg" alt="Projeto de Banco de Dados">
+                    <p>Projeto de Banco de Dados</p>
+                </a>  
+                </div>
+
+                <div class="caixa">
+                    <a target = "_blank"
+                    href = "https://colab.research.google.com/github/matheusmirandalacerda/Projeto_Covid/blob/main/projeto_covid.ipynb" > 
+                    <img src="assets/Pandas.png.png" alt="Análise exploratória dos dados do COVID-19 com Python">
+                    <p>Utilizando Pandas</p>
+                </a>  
+                </div>
+            
+            </div>
+
+       </section> 
+
         <section> 
             <h2>Contato</h2>
             <p>Telefone: (81) 9 9999-0763<br>
                 E-mail: matheus.miranda@hotmail.com<br>
-                Github: <a href = "https://github.com/matheusmirandalacerda">github.com/matheusmirandalacerda</a><br>
-                LINKEDIN: <a href = "https://www.linkedin.com/in/matheus-miranda-lacerda-93b7a61b7/">linkedin.com/in/matheus-miranda-lacerda-93b7a61b7</a></p>
+                Github: <a target = "_blank" href = "https://github.com/matheusmirandalacerda">github.com/matheusmirandalacerda</a><br>
+                LINKEDIN: <a target = "_blank" href = "https://www.linkedin.com/in/matheus-miranda-lacerda-93b7a61b7/">linkedin.com/in/matheus-miranda-lacerda-93b7a61b7</a></p>
        </section>
+
         <footer>Desenvolvido por Matheus Miranda Lacerda</footer> 
+
+        <script src="scripts/script.js"></script>
+        <script>
+            window.onload = function() {
+                manipularEventos();
+            }
+        </script>
     </body>
 </html>
+
 
 
 
